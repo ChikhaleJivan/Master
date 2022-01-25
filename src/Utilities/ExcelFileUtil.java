@@ -26,6 +26,7 @@ public class ExcelFileUtil {
 		return wb.getSheet(sheetname).getLastRowNum();
 	}
 	//method for reading celldata
+	@SuppressWarnings("deprecation")
 	public String getCellData(String sheetName,int row,int column)
 	{
 		String data="";
@@ -42,6 +43,7 @@ public class ExcelFileUtil {
 		return data;
 	}
 	//method for writing to status cell
+	@SuppressWarnings("deprecation")
 	public void setCellData(String sheetName,int row,int column,String status,String writeExcel)throws Throwable
 	{
 		//get sheet from wb
