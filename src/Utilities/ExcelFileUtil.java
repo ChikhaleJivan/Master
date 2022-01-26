@@ -1,5 +1,4 @@
 package Utilities;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
@@ -12,19 +11,23 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class ExcelFileUtil {
+public class ExcelFileUtil 
+{
 	Workbook wb;
+	
 	//constructor for reading excel path
 	public ExcelFileUtil(String excelpath)throws Throwable
 	{
 		FileInputStream fi = new FileInputStream(excelpath);
 		wb= WorkbookFactory.create(fi);
 	}
+	
 	//method for counting no of rows
 	public int rowCount(String sheetname)
 	{
 		return wb.getSheet(sheetname).getLastRowNum();
 	}
+	
 	//method for reading celldata
 	@SuppressWarnings("deprecation")
 	public String getCellData(String sheetName,int row,int column)
@@ -42,6 +45,7 @@ public class ExcelFileUtil {
 		}
 		return data;
 	}
+	
 	//method for writing to status cell
 	@SuppressWarnings("deprecation")
 	public void setCellData(String sheetName,int row,int column,String status,String writeExcel)throws Throwable

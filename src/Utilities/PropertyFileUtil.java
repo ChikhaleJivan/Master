@@ -7,7 +7,7 @@ public class PropertyFileUtil
 	public static String getValueForKey(String key)throws Throwable
 	{
 		Properties config = new Properties();
-		config.load(new FileInputStream("E:\\OJTEveningBatch\\ERP_Hybrid\\PropertyFile\\environment.properties"));
+		config.load(new FileInputStream("C:\\Users\\admin\\eclipse-workspace\\ERP_Hybrid\\PropertyFile\\environment.properties"));
 		return config.getProperty(key);
 	}
 }
