@@ -2,6 +2,7 @@ package Utilities;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
@@ -29,7 +30,6 @@ public class ExcelFileUtil
 	}
 
 	//method for reading celldata
-	@SuppressWarnings("deprecation")
 	public String getCellData(String sheetName,int row,int column)
 	{
 		String data="";
@@ -47,7 +47,6 @@ public class ExcelFileUtil
 	}
 
 	//method for writing to status cell
-	@SuppressWarnings("deprecation")
 	public void setCellData(String sheetName,int row,int column,String status,String writeExcel)throws Throwable
 	{
 		//get sheet from wb
